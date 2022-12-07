@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function sendinput() {
-    axios.get("http://127.0.0.1:8080/input?token=d728393b7235a7f670b518664e33405e&data="+document.getElementById("inputfield").value)
+    axios.get(`${router.query["sendvaddr"]}`+document.getElementById("inputfield").value)
     document.getElementById("inputfield").value=""
 }
 
@@ -13,7 +13,7 @@ export default function Dashboard() {
     const router = useRouter()
     const [data, setData] = useState({"stdout":[],"stdin":[]});
     const [refreshToken, setRefreshToken] = useState(Math.random());
-    const fetchurl='http://127.0.0.1:8080/fetch_latest?token=d728393b7235a7f670b518664e33405e'
+    const fetchurl=`${router.query["recvaddr"]}`
     useEffect(() => {
         axios.get(fetchurl)
         .then((x)=>{setData({"stdout":data["stdout"].concat(x.data["stdout"]).slice(-7),"stdin":data["stdin"].concat(x.data["stdin"]).slice(-7)})})
