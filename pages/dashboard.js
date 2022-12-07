@@ -44,7 +44,7 @@ export default function Dashboard() {
                             isPressable
                             isHoverable
                             variant="flat"
-                            css={{ mw: "400px",margin:"10px" }}
+                            css={{ mw: "600px",margin:"10px" }}
                         >
                             <Card.Body>
                             <Text>{msg}</Text>
@@ -60,7 +60,7 @@ export default function Dashboard() {
                             isPressable
                             isHoverable
                             variant="flat"
-                            css={{ mw: "400px",margin:"10px" }}
+                            css={{ mw: "600px",margin:"10px" }}
                         >
                             <Card.Body>
                             <Text>{msg}</Text>
