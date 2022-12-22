@@ -9,7 +9,7 @@ async function getauth() {
     if (resp!=="0") {
         var recv=url+"fetch_latest?token="+resp
         var send=url+"input?token="+resp+"&data="
-        Router.push('/dashboard?token='+resp+"&recvaddr="+recv+"&sendaddr"+send)
+        Router.push('/dashboard?token='+resp+"&recvaddr="+recv+"&sendaddr="+send)
     }else{
         Router.push('/')
     }

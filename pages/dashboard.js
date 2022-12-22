@@ -81,7 +81,7 @@ export default function Dashboard() {
             />
             <br></br><br></br>
             <Button css={{"margin-left":"45%"}} onClick={()=>{
-                axios.get("http://127.0.0.1:8080/input?token=d728393b7235a7f670b518664e33405e&data="+document.getElementById("inputfield").value)
+                axios.get(router.query["sendaddr"]+"&data="+document.getElementById("inputfield").value)
                 document.getElementById("inputfield").value=""
             }}>Input</Button>
         </> 
